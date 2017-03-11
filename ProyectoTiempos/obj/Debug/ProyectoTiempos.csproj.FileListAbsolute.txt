@@ -24,3 +24,26 @@ C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin
 C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin\Debug\DBAccess.pdb
 C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin\Debug\Npgsql.xml
 C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin\Debug\System.Data.SQLite.xml
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\ProyectoTiempos.exe.config
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.exe
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.pdb
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\ProyectoTiempos.exe
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\ProyectoTiempos.pdb
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\MySql.Data.dll
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\System.Data.SQLite.dll
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\DBAccess.pdb
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\Npgsql.xml
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\bin\Debug\System.Data.SQLite.xml
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.csprojResolveAssemblyReference.cache
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmAyuda.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmConfigCasa.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmGanadores.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmCrearSorteo.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmJugar.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmNumerosPremiados.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.FrmPrincipal.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.FrmLogin.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.FrmRegistro.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Properties.Resources.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmVerSorteos.resources
+C:\Users\Josue\Desktop\Proyecto\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.csproj.GenerateResource.Cache

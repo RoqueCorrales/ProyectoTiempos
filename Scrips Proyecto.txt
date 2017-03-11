@@ -1,0 +1,20 @@
+-- Database: "JPS"
+
+-- DROP DATABASE "JPS";
+
+CREATE DATABASE "JPS"
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Spanish_Spain.1252'
+       LC_CTYPE = 'Spanish_Spain.1252'
+       CONNECTION LIMIT = -1;
+
+CREATE TABLE persona(id serial not null , cedula varchar not null,nombre varchar not null , apellido varchar not null , correo varchar not null ,
+ contrasenna varchar not null, privilegios boolean);
+ ALTER table persona add constraint pk_idPersona Primary Key (id)
+
+INSERT INTO persona(
+            id, cedula, nombre, apellido, correo, contrasenna, privilegios)
+    VALUES (0, 'admin', 'admin', 'admin', 'admin', 'admin', true);
+
