@@ -38,12 +38,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtContrasenna = new System.Windows.Forms.TextBox();
+            this.txtContrasennaConfirm = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -137,59 +137,59 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 17);
             this.lblMensaje.TabIndex = 9;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 22);
-            this.textBox1.TabIndex = 10;
+            this.txtNombre.Location = new System.Drawing.Point(175, 52);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(260, 22);
+            this.txtNombre.TabIndex = 10;
             // 
-            // textBox3
+            // txtCorreo
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 22);
-            this.textBox3.TabIndex = 12;
+            this.txtCorreo.Location = new System.Drawing.Point(175, 175);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(260, 22);
+            this.txtCorreo.TabIndex = 12;
             // 
-            // textBox4
+            // txtContrasenna
             // 
-            this.textBox4.Location = new System.Drawing.Point(175, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 22);
-            this.textBox4.TabIndex = 13;
+            this.txtContrasenna.Location = new System.Drawing.Point(175, 203);
+            this.txtContrasenna.Name = "txtContrasenna";
+            this.txtContrasenna.Size = new System.Drawing.Size(260, 22);
+            this.txtContrasenna.TabIndex = 13;
             // 
-            // textBox5
+            // txtContrasennaConfirm
             // 
-            this.textBox5.Location = new System.Drawing.Point(175, 235);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 22);
-            this.textBox5.TabIndex = 14;
+            this.txtContrasennaConfirm.Location = new System.Drawing.Point(175, 235);
+            this.txtContrasennaConfirm.Name = "txtContrasennaConfirm";
+            this.txtContrasennaConfirm.Size = new System.Drawing.Size(260, 22);
+            this.txtContrasennaConfirm.TabIndex = 14;
             // 
-            // textBox6
+            // txtCedula
             // 
-            this.textBox6.Location = new System.Drawing.Point(175, 131);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(260, 22);
-            this.textBox6.TabIndex = 15;
+            this.txtCedula.Location = new System.Drawing.Point(175, 131);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(260, 22);
+            this.txtCedula.TabIndex = 15;
             // 
-            // textBox7
+            // txtApellido
             // 
-            this.textBox7.Location = new System.Drawing.Point(175, 89);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(260, 22);
-            this.textBox7.TabIndex = 16;
+            this.txtApellido.Location = new System.Drawing.Point(175, 89);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(260, 22);
+            this.txtApellido.TabIndex = 16;
             // 
             // FrmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 372);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtContrasennaConfirm);
+            this.Controls.Add(this.txtContrasenna);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -219,11 +219,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtContrasenna;
+        private System.Windows.Forms.TextBox txtContrasennaConfirm;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtApellido;
     }
 }
