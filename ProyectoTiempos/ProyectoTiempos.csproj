@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\Persona.cs" />
+    <Compile Include="Controladores\Serial.cs" />
     <Compile Include="Controladores\Sorteo.cs" />
     <Compile Include="Modelo\Persona.cs" />
     <Compile Include="Modelo\Sorteo.cs" />

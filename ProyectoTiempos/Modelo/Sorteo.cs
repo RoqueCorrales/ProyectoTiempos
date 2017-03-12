@@ -49,7 +49,7 @@ namespace ProyectoTiempos.Modelo
             parametros.Add("descripcion", this.descripcion);
             parametros.Add("codigo", this.codigo);
             
-            DataTable result = Program.da.SqlQuery("insert into sorteo(descripcion,fecha,estado,codigo ) values (@fecha ,@estado,@descripcion,@codigo) returning id;", parametros);
+            DataTable result = Program.da.SqlQuery("insert into sorteo(descripcion,fecha,estado,codigo ) values (@descripcion ,@fecha,@estado,@codigo) returning id;", parametros);
             if (Program.da.isError)
             {
                 this.isError = true;
