@@ -13,13 +13,17 @@ namespace ProyectoTiempos.Vistas
 {
     public partial class FrmCrearSorteo : Form
     {
+        
         private Serial serial;
         private Sorteo sorteo;
         public FrmCrearSorteo()
         {
+
             InitializeComponent();
             serial = new Serial();
             sorteo = new Sorteo();
+            // Refrescar();
+            dgSorteos = new DataGridView();
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -32,7 +36,7 @@ namespace ProyectoTiempos.Vistas
         {
             DateTime fecha = dtHora.Value.Date +
                     dtHora.Value.TimeOfDay;
-
+            MessageBox.Show(fecha.ToString());
          
             string descripcion = txtDescripcion.Text;
             string codigo = lblSerial.Text;
@@ -40,6 +44,22 @@ namespace ProyectoTiempos.Vistas
 
             sorteo.Insert(descripcion, codigo, fecha, estado);
 
+        }
+        private void Refrescar()
+        {
+            DataTable result = new DataTable();
+            result = this.sorteo.Select();
+            if (this.sorteo.isError)
+            {
+                MessageBox.Show(this.sorteo.errorDescription);
+                return;
+            }
+            this.dgSorteos.DataSource = result;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Refrescar();
         }
     }
 }
