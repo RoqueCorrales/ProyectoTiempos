@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Controladores\Casa.cs" />
     <Compile Include="Controladores\Persona.cs" />
+    <Compile Include="Utils\Logica.cs" />
     <Compile Include="Utils\Notificacion.cs" />
     <Compile Include="Utils\Serial.cs" />
     <Compile Include="Controladores\Sorteo.cs" />
@@ -79,11 +80,11 @@
     <Compile Include="Vistas\FrmGanadores.Designer.cs">
       <DependentUpon>FrmGanadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Crear Sorteo.cs">
+    <Compile Include="Vistas\FrmCrearSorteo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Crear Sorteo.Designer.cs">
-      <DependentUpon>Crear Sorteo.cs</DependentUpon>
+    <Compile Include="Vistas\FrmCrearSorteo.Designer.cs">
+      <DependentUpon>FrmCrearSorteo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FrmJugar.cs">
       <SubType>Form</SubType>
@@ -132,8 +133,8 @@
     <EmbeddedResource Include="Vistas\FrmGanadores.resx">
       <DependentUpon>FrmGanadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Crear Sorteo.resx">
-      <DependentUpon>Crear Sorteo.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\FrmCrearSorteo.resx">
+      <DependentUpon>FrmCrearSorteo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmJugar.resx">
       <DependentUpon>FrmJugar.cs</DependentUpon>
