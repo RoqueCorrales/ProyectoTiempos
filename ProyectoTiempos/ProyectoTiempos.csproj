@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Controladores\Casa.cs" />
     <Compile Include="Controladores\Persona.cs" />
+    <Compile Include="Utils\Notificacion.cs" />
+    <Compile Include="Utils\Serial.cs" />
     <Compile Include="Controladores\Sorteo.cs" />
     <Compile Include="Modelo\Casa.cs" />
     <Compile Include="Modelo\Persona.cs" />
