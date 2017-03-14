@@ -51,6 +51,19 @@ namespace ProyectoTiempos.Controladores
             return result;
         }
 
+
+
+        public void Update(int id, string descripcion, DateTime fecha, Boolean estado, string codigo)
+        {
+            
+            this.sorteo.Update(id,descripcion,fecha,estado,codigo);
+            if (this.sorteo.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.sorteo.errorDescription;
+            }
+        }
+
     }
 }
 

@@ -25,7 +25,7 @@ namespace ProyectoTiempos.Vistas
         {
             DataTable result = new DataTable();
 
-            result = this.sorteo.Select();
+            result = this.sorteo.SelectCodigo();
 
             for (int i = 0; i < result.Rows.Count; i++)
             {
@@ -38,6 +38,11 @@ namespace ProyectoTiempos.Vistas
             }
 
             return cbSorteo;
+        }
+
+        private void cbSorteo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

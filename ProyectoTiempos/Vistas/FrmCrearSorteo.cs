@@ -58,6 +58,19 @@ namespace ProyectoTiempos.Vistas
             this.dtgSorteo.DataSource = result;
         }
 
-       
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(this.dtgSorteo.CurrentRow.Cells[0].Value.ToString());
+            string descripcion = this.dtgSorteo.CurrentRow.Cells[1].Value.ToString();
+            DateTime fecha = DateTime.Parse(this.dtgSorteo.CurrentRow.Cells[2].Value.ToString());
+            Boolean estado = true;
+            string codigo = this.dtgSorteo.CurrentRow.Cells[4].Value.ToString();
+            this.sorteo.Update(id, descripcion, fecha, estado, codigo);
+            if (this.sorteo.isError)
+            {
+                MessageBox.Show(this.sorteo.errorDescription);
+                return;
+            }
+        }
     }
 }

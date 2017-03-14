@@ -68,7 +68,8 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(354, 35);
+            this.btnGenerar.Location = new System.Drawing.Point(355, 34);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 3;
@@ -79,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 88);
+            this.label3.Location = new System.Drawing.Point(32, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 4;
@@ -88,6 +89,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(224, 203);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
@@ -106,21 +108,24 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(577, 235);
+            this.button1.Location = new System.Drawing.Point(571, 230);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
+            this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "Deshabilitar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnHabilitar
             // 
-            this.btnHabilitar.Location = new System.Drawing.Point(470, 232);
+            this.btnHabilitar.Location = new System.Drawing.Point(469, 231);
+            this.btnHabilitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHabilitar.Name = "btnHabilitar";
             this.btnHabilitar.Size = new System.Drawing.Size(75, 23);
             this.btnHabilitar.TabIndex = 9;
             this.btnHabilitar.Text = "Habilitar";
             this.btnHabilitar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
             // label2
             // 
@@ -134,6 +139,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(160, 137);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(268, 22);
             this.txtDescripcion.TabIndex = 11;
@@ -141,9 +147,10 @@
             // dtHora
             // 
             this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtHora.Location = new System.Drawing.Point(173, 88);
+            this.dtHora.Location = new System.Drawing.Point(173, 89);
+            this.dtHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtHora.Name = "dtHora";
-            this.dtHora.Size = new System.Drawing.Size(170, 22);
+            this.dtHora.Size = new System.Drawing.Size(169, 22);
             this.dtHora.TabIndex = 12;
             // 
             // dtgSorteo
@@ -157,7 +164,7 @@
             this.Estado,
             this.Codigo});
             this.dtgSorteo.Location = new System.Drawing.Point(13, 265);
-            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgSorteo.Name = "dtgSorteo";
             this.dtgSorteo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgSorteo.Size = new System.Drawing.Size(731, 320);
@@ -200,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 588);
+            this.ClientSize = new System.Drawing.Size(781, 588);
             this.Controls.Add(this.dtgSorteo);
             this.Controls.Add(this.dtHora);
             this.Controls.Add(this.txtDescripcion);
@@ -213,6 +220,7 @@
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblSerial);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCrearSorteo";
             this.Text = "FrmHabilitar";
             ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).EndInit();

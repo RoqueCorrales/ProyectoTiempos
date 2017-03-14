@@ -85,6 +85,7 @@
             this.cbSorteo.Name = "cbSorteo";
             this.cbSorteo.Size = new System.Drawing.Size(163, 24);
             this.cbSorteo.TabIndex = 5;
+            this.cbSorteo.SelectedIndexChanged += new System.EventHandler(this.cbSorteo_SelectedIndexChanged);
             // 
             // btnNotificar
             // 

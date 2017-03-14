@@ -23,8 +23,8 @@ namespace ProyectoTiempos.Vistas
             notificacion = new Notificacion();
             log = new Logica();
             sorteo = new Sorteo();
-            //cargarCombo();
-            cbSorteo = log.cargarCombo();
+            cargarCombo();
+            //cbSorteo = log.cargarCombo();
         }
 
         private void btnNotificar_Click(object sender, EventArgs e)
@@ -59,6 +59,11 @@ namespace ProyectoTiempos.Vistas
             }
 
             return cbSorteo;
+        }
+
+        private void cbSorteo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

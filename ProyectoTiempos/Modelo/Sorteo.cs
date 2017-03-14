@@ -42,7 +42,7 @@ namespace ProyectoTiempos.Modelo
         }
         public DataTable SelectCodigo()
         {
-            DataTable result = Program.da.SqlQuery("SELECT codigo FROM public.sorteo;", new Dictionary<string, object>());
+            DataTable result = Program.da.SqlQuery("SELECT * FROM public.sorteo WHERE estado = True;", new Dictionary<string, object>());
             if (Program.da.isError)
             {
                 this.isError = true;
@@ -86,6 +86,23 @@ namespace ProyectoTiempos.Modelo
                 this.errorDescription = Program.da.errorDescription;
             }
             return result;
+        }
+
+        public void Update(int id, string descripcion, DateTime fecha,Boolean estado, string codigo)
+        {
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("descripcion", descripcion);
+            parametros.Add("fecha", fecha);
+            parametros.Add("estado", estado);
+            parametros.Add("codigo", codigo);
+            parametros.Add("id", id);
+            Program.da.SqlStatement("update sorteo set descripcion=@descripcion, fecha=@fecha, estado=@estado, codigo=@codigo where id = @id", parametros);
+            if (Program.da.isError)
+            {
+                this.isError = true;
+                this.errorDescription = Program.da.errorDescription;
+                return;
+            }
         }
 
 
