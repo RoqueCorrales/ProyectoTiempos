@@ -11,7 +11,7 @@ using ProyectoTiempos.Controlador;
 
 namespace ProyectoTiempos
 {
-    
+
     public partial class FrmRegistro : Form
     {
 
@@ -29,25 +29,32 @@ namespace ProyectoTiempos
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string contrasena = txtContrasenna.Text;
-            string correo = txtCorreo.Text;
-            string ced = txtCedula.Text;
-
-            if (PasswordConfirm())
+            DataTable p = persona.Select(txtCorreo.Text);
+            if (camposLlenos())
             {
 
-                this.persona.Insert(nombre, apellido, ced, contrasena, correo);
-                if (this.persona.isError)
+                if (p.Rows.Count <= 0)
                 {
-                    MessageBox.Show(this.persona.errorDescription);
-                    return;
+                    String nombre = txtNombre.Text;
+                    String apellido = txtApellido.Text;
+                    String cedula = txtCedula.Text;
+                    String contrasennna = txtContrasenna.Text;
+                    String correo = txtCorreo.Text;
+
+
+                    persona.Insert(nombre, apellido, cedula, contrasennna, correo);
+
+                    MessageBox.Show("Usuario Registrado");
+                    this.Close();
+
                 }
-                MessageBox.Show("Persona Registrada");
-                this.Close();
+                else
+                {
+                    MessageBox.Show("El correo pertenece a una cuenta ya registrada");
+
+                }
             }
+
         }
         public Boolean PasswordConfirm()
         {
@@ -59,10 +66,45 @@ namespace ProyectoTiempos
                             "        Contraseñas no son iguales");
             return false;
         }
+        private Boolean camposLlenos()
+        {
+
+            if (txtNombre.Text.Equals("") || txtNombre.Equals(" "))
+            {
+                MessageBox.Show("Nombre Invalido");
+                return false;
+
+            }
+            else if (txtApellido.Text.Equals("") || txtApellido.Equals(" "))
+            {
+                MessageBox.Show("Apellido Invalido");
+                return false;
+            }
+            else if (txtCedula.Text.Equals("") || txtCedula.Equals(" "))
+            {
+                MessageBox.Show("Cedula Invalida");
+                return false;
+            }
+            else if (txtContrasenna.Text.Equals("") || txtContrasenna.Equals(" "))
+            {
+                MessageBox.Show("Contraseña Invalida");
+                return false;
+            }
+            else if (txtCorreo.Text.Equals("") || txtCorreo.Equals(" "))
+            {
+                MessageBox.Show("Correo Invalido");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
 
 
     }
 
 
 }
-
