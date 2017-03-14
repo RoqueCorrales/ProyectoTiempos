@@ -29,10 +29,10 @@ namespace ProyectoTiempos.Controladores
             }
         }
 
-        public DataTable Select(string nombre)
+        public DataTable Select()
         {
             DataTable result = new DataTable();
-            result = this.casa.Select(nombre);
+            result = this.casa.Select();
             if (this.casa.isError)
             {
                 this.isError = true;
@@ -41,6 +41,27 @@ namespace ProyectoTiempos.Controladores
             return result;
         }
 
+        public void Update(int id, string nombre, double dinero)
+        {
+            this.casa = new Modelo.Casa(nombre,dinero);
+            this.casa.Update(id);
+            if (this.casa.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.casa.errorDescription;
+            }
+        }
+
+        public void UpdateDinero(int id, double dinero)
+        {
+            this.casa = new Modelo.Casa(dinero);
+            this.casa.Update(id);
+            if (this.casa.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.casa.errorDescription;
+            }
+        }
 
 
 

@@ -23,8 +23,8 @@ namespace ProyectoTiempos.Vistas
             notificacion = new Notificacion();
             log = new Logica();
             sorteo = new Sorteo();
-            //cargarCombo();
-            cbSorteo.Items.Add(log.cargarCombo()); 
+            cargarCombo();
+            //cbSorteo.Items.Add(log.cargarCombo()); 
         }
 
         private void btnNotificar_Click(object sender, EventArgs e)

@@ -53,8 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\Apuesta.cs" />
     <Compile Include="Controladores\Casa.cs" />
     <Compile Include="Controladores\Persona.cs" />
+    <Compile Include="Modelo\Apuesta.cs" />
     <Compile Include="Utils\Logica.cs" />
     <Compile Include="Utils\Notificacion.cs" />
     <Compile Include="Utils\Serial.cs" />

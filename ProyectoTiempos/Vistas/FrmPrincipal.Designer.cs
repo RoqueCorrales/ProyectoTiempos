@@ -149,7 +149,7 @@
             // lblJugador
             // 
             this.lblJugador.AutoSize = true;
-            this.lblJugador.Location = new System.Drawing.Point(392, 0);
+            this.lblJugador.Location = new System.Drawing.Point(549, 11);
             this.lblJugador.Name = "lblJugador";
             this.lblJugador.Size = new System.Drawing.Size(0, 13);
             this.lblJugador.TabIndex = 4;
