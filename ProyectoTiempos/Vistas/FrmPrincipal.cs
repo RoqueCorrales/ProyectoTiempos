@@ -21,18 +21,20 @@ namespace ProyectoTiempos
         private FrmAyuda oAyuda;
         private FrmVerSorteos oVerSorteos;
         private FrmJugar oJugar;
+        private Modelo.Persona person;
         public FrmPrincipal()
         {
             InitializeComponent();
 
         }
-        public FrmPrincipal(Boolean privilegios)
+        public FrmPrincipal(Boolean privilegios , Modelo.Persona person)
         {
             InitializeComponent();
             configuracion.Visible = privilegios;
-
-
+            this.person = person;
+            lblJugador.Text = person.nombre;
         }
+
         private bool HandleForm(Form currentForm)
         {
             if (this.MdiChildren.Contains(currentForm))

@@ -41,14 +41,26 @@ namespace ProyectoTiempos
                 return false;
             }
             DataRow row = p.Rows[0];
+            string id = row["id"].ToString();   
             string pass = row["contrasenna"].ToString();
+            string nombre = row["nombre"].ToString();
+            string cedula = row["cedula"].ToString();
             String correo = row["correo"].ToString();
+            string apellido = row["apellido"].ToString();
             String priv = row["privilegios"].ToString();
             Boolean privilegios = Convert.ToBoolean(priv);
 
             if (txtCorreo.Text.Equals(correo) && txtContrasenna.Text.Equals(pass))
             {
-                oPrincipal = new FrmPrincipal(privilegios);
+                Modelo.Persona person = new Modelo.Persona();
+                person.nombre = nombre;
+                person.id = Convert.ToInt32(id);
+                person.cedula = cedula;
+                person.apellido = apellido;
+                person.contrasenna = pass;
+                person.correo = correo;
+
+                oPrincipal = new FrmPrincipal(privilegios , person);
                 oPrincipal.Show();
                 this.Hide();
             }
