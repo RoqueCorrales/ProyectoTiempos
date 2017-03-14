@@ -64,6 +64,19 @@ namespace ProyectoTiempos.Controladores
             }
         }
 
+        public DataTable SelectCodigo(String codigo)
+        {
+            DataTable result = new DataTable();
+            result = new DataTable();
+            result = this.sorteo.SelectCodigo(codigo);
+            if (this.sorteo.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.sorteo.errorDescription;
+            }
+            return result;
+        }
+
     }
 }
 

@@ -32,7 +32,7 @@ namespace ProyectoTiempos.Modelo
 
         public DataTable Select()
         {
-            DataTable result = Program.da.SqlQuery("select * from sorteo;", new Dictionary<string, object>());
+            DataTable result = Program.da.SqlQuery("select * from sorteo ;", new Dictionary<string, object>());
             if (Program.da.isError)
             {
                 this.isError = true;
@@ -103,6 +103,17 @@ namespace ProyectoTiempos.Modelo
                 this.errorDescription = Program.da.errorDescription;
                 return;
             }
+        }
+        public DataTable SelectCodigo(String codigo)
+        {
+
+            DataTable result = Program.da.SqlQuery("select * from sorteo where codigo = '" + codigo + "'", new Dictionary<string, object>());
+            if (Program.da.isError)
+            {
+                this.isError = true;
+                this.errorDescription = Program.da.errorDescription;
+            }
+            return result;
         }
 
 

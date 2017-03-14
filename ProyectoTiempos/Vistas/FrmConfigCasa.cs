@@ -61,8 +61,33 @@ namespace ProyectoTiempos.Vistas
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            String nombre = txtNombre.Text;
+
+            DataTable tableCasa = casa.Select();
+            if (tableCasa.Rows.Count > 0)
+            {
+                if (validacionDinero())
+                {
+
+                    DataRow row = tableCasa.Rows[0];
+                    int id = Convert.ToInt32(row["id"].ToString());
+                    casa.Update(id, txtNombre.Text, Convert.ToInt32(txtDinero.Text));
+                    MessageBox.Show("Configuracion Actualizada");
+                }
+
+            }
+            else
+            {
+                if (validacionDinero())
+                {
+                    double dinero = Convert.ToDouble(txtDinero.Text);
+                    casa.Insert(nombre, dinero);
+                    MessageBox.Show("Configuracion establecida");
+
+                }
+
+            }
 
         }
     }
 }
-

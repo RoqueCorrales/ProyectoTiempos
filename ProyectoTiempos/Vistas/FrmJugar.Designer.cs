@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtMontoApuesta = new System.Windows.Forms.TextBox();
+            this.cbNumero = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -45,6 +45,7 @@
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // cbSorteo
             // 
@@ -82,17 +83,17 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Monto a Apostar :  ";
             // 
-            // textBox1
+            // txtMontoApuesta
             // 
-            this.textBox1.Location = new System.Drawing.Point(447, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 5;
+            this.txtMontoApuesta.Location = new System.Drawing.Point(447, 47);
+            this.txtMontoApuesta.Name = "txtMontoApuesta";
+            this.txtMontoApuesta.Size = new System.Drawing.Size(100, 22);
+            this.txtMontoApuesta.TabIndex = 5;
             // 
-            // comboBox2
+            // cbNumero
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbNumero.FormattingEnabled = true;
+            this.cbNumero.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -190,18 +191,18 @@
             "97",
             "98",
             "99"});
-            this.comboBox2.Location = new System.Drawing.Point(253, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 6;
+            this.cbNumero.Location = new System.Drawing.Point(253, 47);
+            this.cbNumero.Name = "cbNumero";
+            this.cbNumero.Size = new System.Drawing.Size(121, 24);
+            this.cbNumero.TabIndex = 6;
             // 
             // FrmJugar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 306);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbNumero);
+            this.Controls.Add(this.txtMontoApuesta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -221,7 +222,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtMontoApuesta;
+        private System.Windows.Forms.ComboBox cbNumero;
     }
 }

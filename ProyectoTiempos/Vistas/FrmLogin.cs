@@ -41,7 +41,7 @@ namespace ProyectoTiempos
                 return false;
             }
             DataRow row = p.Rows[0];
-            string id = row["id"].ToString();   
+            string id = row["id"].ToString();
             string pass = row["contrasenna"].ToString();
             string nombre = row["nombre"].ToString();
             string cedula = row["cedula"].ToString();
@@ -60,7 +60,7 @@ namespace ProyectoTiempos
                 person.contrasenna = pass;
                 person.correo = correo;
 
-                oPrincipal = new FrmPrincipal(privilegios , person);
+                oPrincipal = new FrmPrincipal(privilegios, person);
                 oPrincipal.Show();
                 this.Hide();
             }
@@ -78,3 +78,4 @@ namespace ProyectoTiempos
 
     }
 }
+
