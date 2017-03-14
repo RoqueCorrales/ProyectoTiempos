@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTiempos.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,31 @@ namespace ProyectoTiempos.Vistas
 {
     public partial class FrmJugar : Form
     {
+        private Sorteo sorteo;
         public FrmJugar()
         {
             InitializeComponent();
+            sorteo = new Sorteo();
+            cargarCombo();
+        }
+
+        public ComboBox cargarCombo()
+        {
+            DataTable result = new DataTable();
+
+            result = this.sorteo.Select();
+
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                cbSorteo.Items.Add(result.Rows[i]["codigo"]);
+            }
+            if (this.sorteo.isError)
+            {
+                MessageBox.Show(this.sorteo.errorDescription);
+
+            }
+
+            return cbSorteo;
         }
     }
 }

@@ -40,6 +40,17 @@ namespace ProyectoTiempos.Modelo
             }
             return result;
         }
+        public DataTable SelectCodigo()
+        {
+            DataTable result = Program.da.SqlQuery("SELECT codigo FROM public.sorteo;", new Dictionary<string, object>());
+            if (Program.da.isError)
+            {
+                this.isError = true;
+                this.errorDescription = Program.da.errorDescription;
+                
+            }
+            return result;
+        }
 
         public void Insert()
         {

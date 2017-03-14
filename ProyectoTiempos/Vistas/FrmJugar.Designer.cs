@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSorteo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,13 +46,13 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbSorteo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(32, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbSorteo.FormattingEnabled = true;
+            this.cbSorteo.Location = new System.Drawing.Point(32, 47);
+            this.cbSorteo.Name = "cbSorteo";
+            this.cbSorteo.Size = new System.Drawing.Size(121, 24);
+            this.cbSorteo.TabIndex = 1;
             // 
             // label1
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbSorteo);
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmJugar";
             this.Text = "FrmJugar";
@@ -216,7 +216,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSorteo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
