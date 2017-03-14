@@ -39,9 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dtHora = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dgSorteos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSorteos)).BeginInit();
+            this.dtgSorteo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(463, 310);
+            this.button1.Location = new System.Drawing.Point(577, 235);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
             this.button1.TabIndex = 8;
@@ -111,7 +115,7 @@
             // 
             // btnHabilitar
             // 
-            this.btnHabilitar.Location = new System.Drawing.Point(474, 269);
+            this.btnHabilitar.Location = new System.Drawing.Point(470, 232);
             this.btnHabilitar.Name = "btnHabilitar";
             this.btnHabilitar.Size = new System.Drawing.Size(75, 23);
             this.btnHabilitar.TabIndex = 9;
@@ -142,32 +146,62 @@
             this.dtHora.Size = new System.Drawing.Size(170, 22);
             this.dtHora.TabIndex = 12;
             // 
-            // button2
+            // dtgSorteo
             // 
-            this.button2.Location = new System.Drawing.Point(418, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.dtgSorteo.AllowUserToAddRows = false;
+            this.dtgSorteo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgSorteo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.name,
+            this.phone,
+            this.Estado,
+            this.Codigo});
+            this.dtgSorteo.Location = new System.Drawing.Point(13, 265);
+            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgSorteo.Name = "dtgSorteo";
+            this.dtgSorteo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgSorteo.Size = new System.Drawing.Size(731, 320);
+            this.dtgSorteo.TabIndex = 14;
             // 
-            // dgSorteos
+            // dataGridViewTextBoxColumn1
             // 
-            this.dgSorteos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSorteos.Location = new System.Drawing.Point(89, 278);
-            this.dgSorteos.Name = "dgSorteos";
-            this.dgSorteos.RowTemplate.Height = 24;
-            this.dgSorteos.Size = new System.Drawing.Size(340, 194);
-            this.dgSorteos.TabIndex = 14;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "descripcion";
+            this.name.HeaderText = "Descripcion";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "Fecha";
+            this.phone.HeaderText = "Fecha";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
             // 
             // FrmCrearSorteo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 524);
-            this.Controls.Add(this.dgSorteos);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(782, 588);
+            this.Controls.Add(this.dtgSorteo);
             this.Controls.Add(this.dtHora);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
@@ -181,7 +215,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCrearSorteo";
             this.Text = "FrmHabilitar";
-            ((System.ComponentModel.ISupportInitialize)(this.dgSorteos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +234,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DateTimePicker dtHora;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dgSorteos;
+        private System.Windows.Forms.DataGridView dtgSorteo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
     }
 }

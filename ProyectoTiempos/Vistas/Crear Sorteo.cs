@@ -22,8 +22,8 @@ namespace ProyectoTiempos.Vistas
             InitializeComponent();
             serial = new Serial();
             sorteo = new Sorteo();
-            // Refrescar();
-            dgSorteos = new DataGridView();
+             Refrescar();
+           
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -43,6 +43,7 @@ namespace ProyectoTiempos.Vistas
             Boolean estado = false;
 
             sorteo.Insert(descripcion, codigo, fecha, estado);
+            Refrescar();
 
         }
         private void Refrescar()
@@ -54,12 +55,9 @@ namespace ProyectoTiempos.Vistas
                 MessageBox.Show(this.sorteo.errorDescription);
                 return;
             }
-            this.dgSorteos.DataSource = result;
+            this.dtgSorteo.DataSource = result;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Refrescar();
-        }
+       
     }
 }
