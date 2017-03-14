@@ -38,11 +38,11 @@ namespace ProyectoTiempos.Controladores
             return result;
         }
 
-        public DataTable SelectCodigo()
+        public DataTable SelectCodigo(String codigo)
         {
             DataTable result = new DataTable();
             result = new DataTable();
-            result = this.sorteo.SelectCodigo();
+            result = this.sorteo.SelectCodigo(codigo);
             if (this.sorteo.isError)
             {
                 this.isError = true;

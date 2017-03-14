@@ -76,7 +76,7 @@ namespace ProyectoTiempos.Modelo
 
 
         }
-        public DataTable Select(String codigo)
+        public DataTable SelectCodigo(String codigo)
         {
 
             DataTable result = Program.da.SqlQuery("select * from sorteo where codigo = '" + codigo + "'", new Dictionary<string, object>());

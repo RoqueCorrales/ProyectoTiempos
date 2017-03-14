@@ -114,7 +114,7 @@ namespace ProyectoTiempos
         {
             if (this.HandleForm(this.oJugar))
             {
-                this.oJugar = new FrmJugar();
+                this.oJugar = new FrmJugar(person);
                 oJugar.MdiParent = this;
                 oJugar.Show();
             }

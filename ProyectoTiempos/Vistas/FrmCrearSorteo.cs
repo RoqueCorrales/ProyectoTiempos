@@ -36,7 +36,7 @@ namespace ProyectoTiempos.Vistas
         {
             DateTime fecha = dtHora.Value.Date +
                     dtHora.Value.TimeOfDay;
-            MessageBox.Show(fecha.ToString());
+      
          
             string descripcion = txtDescripcion.Text;
             string codigo = lblSerial.Text;

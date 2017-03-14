@@ -25,9 +25,16 @@ namespace ProyectoTiempos.Modelo
             this.dinero = dinero;
         }
 
+        public Casa(double dinero)
+        {
+
+            this.dinero = dinero;
+        }
 
 
-        public DataTable Select(string nombre)
+
+
+        public DataTable Select()
         {
             DataTable result = Program.da.SqlQuery("select * from configuracion;", new Dictionary<string, object>());
             if (Program.da.isError)
@@ -73,6 +80,22 @@ namespace ProyectoTiempos.Modelo
                 return;
             }
         }
+
+        public void UpdateDinero(int id)
+        {
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("dinero", this.dinero);
+            parametros.Add("id", id);
+            Program.da.SqlStatement("update configuracion set dinero=@dinero where id = @id", parametros);
+            if (Program.da.isError)
+            {
+                this.isError = true;
+                this.errorDescription = Program.da.errorDescription;
+                return;
+            }
+        }
+
+
     }
 }
 
