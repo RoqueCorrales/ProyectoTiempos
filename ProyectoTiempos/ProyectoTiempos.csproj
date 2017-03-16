@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DBAccess">
       <HintPath>..\..\DBAccess\DBAccess\bin\Debug\DBAccess.dll</HintPath>
     </Reference>
@@ -57,6 +61,7 @@
     <Compile Include="Controladores\Casa.cs" />
     <Compile Include="Controladores\Persona.cs" />
     <Compile Include="Modelo\Apuesta.cs" />
+    <Compile Include="Utils\Contrasenna.cs" />
     <Compile Include="Utils\Logica.cs" />
     <Compile Include="Utils\Notificacion.cs" />
     <Compile Include="Utils\Serial.cs" />
@@ -165,6 +170,7 @@
     <EmbeddedResource Include="Vistas\FrmVerSorteos.resx">
       <DependentUpon>FrmVerSorteos.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

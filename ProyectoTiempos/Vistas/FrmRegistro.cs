@@ -41,6 +41,7 @@ namespace ProyectoTiempos
                     String contrasennna = txtContrasenna.Text;
                     String correo = txtCorreo.Text;
 
+                   
 
                     persona.Insert(nombre, apellido, cedula, contrasennna, correo);
 
@@ -102,7 +103,7 @@ namespace ProyectoTiempos
 
 
         }
-
+     
 
     }
 

@@ -47,3 +47,5 @@ C:\Users\Josue\Desktop\Proyecto Git\ProyectoTiempos\ProyectoTiempos\obj\Debug\Pr
 C:\Users\Josue\Desktop\Proyecto Git\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Properties.Resources.resources
 C:\Users\Josue\Desktop\Proyecto Git\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.Vistas.FrmVerSorteos.resources
 C:\Users\Josue\Desktop\Proyecto Git\ProyectoTiempos\ProyectoTiempos\obj\Debug\ProyectoTiempos.csproj.GenerateResource.Cache
+C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin\Debug\BCrypt.Net.dll
+C:\Users\roke1\Desktop\Utn\4 cuatri\Progra 3\ProyectoTiempos\ProyectoTiempos\bin\Debug\BCrypt.Net.xml

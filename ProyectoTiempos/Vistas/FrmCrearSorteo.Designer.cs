@@ -34,8 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnHabilitar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dtHora = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +44,12 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rbHabilitar = new System.Windows.Forms.RadioButton();
+            this.rbDeshabilitar = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -106,26 +110,16 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Lista de Sorteos registrados";
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Location = new System.Drawing.Point(571, 230);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Deshabilitar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnHabilitar
-            // 
-            this.btnHabilitar.Location = new System.Drawing.Point(469, 231);
-            this.btnHabilitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(75, 23);
-            this.btnHabilitar.TabIndex = 9;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = true;
-            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
+            this.btnActualizar.Location = new System.Drawing.Point(568, 159);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(102, 23);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
             // label2
             // 
@@ -164,11 +158,12 @@
             this.Estado,
             this.Codigo});
             this.dtgSorteo.Location = new System.Drawing.Point(13, 265);
-            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4);
             this.dtgSorteo.Name = "dtgSorteo";
             this.dtgSorteo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgSorteo.Size = new System.Drawing.Size(731, 320);
             this.dtgSorteo.TabIndex = 14;
+            this.dtgSorteo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSorteo_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -203,17 +198,58 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rbDeshabilitar);
+            this.panel1.Controls.Add(this.rbHabilitar);
+            this.panel1.Location = new System.Drawing.Point(492, 117);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(252, 37);
+            this.panel1.TabIndex = 15;
+            // 
+            // rbHabilitar
+            // 
+            this.rbHabilitar.AutoSize = true;
+            this.rbHabilitar.Location = new System.Drawing.Point(3, 13);
+            this.rbHabilitar.Name = "rbHabilitar";
+            this.rbHabilitar.Size = new System.Drawing.Size(81, 21);
+            this.rbHabilitar.TabIndex = 0;
+            this.rbHabilitar.TabStop = true;
+            this.rbHabilitar.Text = "Habilitar";
+            this.rbHabilitar.UseVisualStyleBackColor = true;
+            // 
+            // rbDeshabilitar
+            // 
+            this.rbDeshabilitar.AutoSize = true;
+            this.rbDeshabilitar.Location = new System.Drawing.Point(139, 13);
+            this.rbDeshabilitar.Name = "rbDeshabilitar";
+            this.rbDeshabilitar.Size = new System.Drawing.Size(104, 21);
+            this.rbDeshabilitar.TabIndex = 1;
+            this.rbDeshabilitar.TabStop = true;
+            this.rbDeshabilitar.Text = "Deshabilitar";
+            this.rbDeshabilitar.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(514, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 17);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Habilite o deshabilite un Sorteo.";
+            // 
             // FrmCrearSorteo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 588);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgSorteo);
             this.Controls.Add(this.dtHora);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnHabilitar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label3);
@@ -224,6 +260,8 @@
             this.Name = "FrmCrearSorteo";
             this.Text = "FrmHabilitar";
             ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,8 +275,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DateTimePicker dtHora;
@@ -248,5 +285,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rbDeshabilitar;
+        private System.Windows.Forms.RadioButton rbHabilitar;
+        private System.Windows.Forms.Label label5;
     }
 }

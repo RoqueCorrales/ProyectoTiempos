@@ -41,6 +41,11 @@ namespace ProyectoTiempos.Vistas
             string descripcion = txtDescripcion.Text;
             string codigo = lblSerial.Text;
             Boolean estado = false;
+            if (rbHabilitar.Checked)
+            {
+                estado = true;
+            }
+            MessageBox.Show(Convert.ToString(estado));
 
             sorteo.Insert(descripcion, codigo, fecha, estado);
             Refrescar();
@@ -60,12 +65,27 @@ namespace ProyectoTiempos.Vistas
 
         private void btnHabilitar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void dtgSorteo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             int id = Convert.ToInt32(this.dtgSorteo.CurrentRow.Cells[0].Value.ToString());
             string descripcion = this.dtgSorteo.CurrentRow.Cells[1].Value.ToString();
+            txtDescripcion.Text = descripcion;
             DateTime fecha = DateTime.Parse(this.dtgSorteo.CurrentRow.Cells[2].Value.ToString());
-            Boolean estado = true;
+            dtHora.Value = fecha;
+            Boolean estado = Convert.ToBoolean(this.dtgSorteo.CurrentRow.Cells[3].Value.ToString()); ;
+            if (estado)
+            {
+                rbHabilitar.Select();
+            }else
+            {
+                rbDeshabilitar.Select();
+            }
             string codigo = this.dtgSorteo.CurrentRow.Cells[4].Value.ToString();
-            this.sorteo.Update(id, descripcion, fecha, estado, codigo);
+            lblSerial.Text = codigo;
+           // this.sorteo.Update(id, descripcion, fecha, estado, codigo);
             if (this.sorteo.isError)
             {
                 MessageBox.Show(this.sorteo.errorDescription);

@@ -110,6 +110,7 @@ namespace ProyectoTiempos.Vistas
             cbSorteo.SelectedIndex = -1;
             cbNumero.SelectedIndex = -1;
             txtMontoApuesta.Text = "";
+           // if (string.IsNullOrEmpty(txtMontoApuesta.ToString())) ;
         }
 
 
