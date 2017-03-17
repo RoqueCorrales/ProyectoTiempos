@@ -37,6 +37,25 @@ namespace ProyectoTiempos.Utils
 
             return combo;
             }
+
+
+        public Boolean existeSorteo(string codigo)
+        {
+            DataTable sor = new DataTable();
+
+            sor = sorteo.SelectCodigo(codigo);
+
+            if(sor.Rows.Count > 0)
+            {
+                return true;
+            }
+
+
+            return false;
+        }
+
+
+
         }
     }
 
