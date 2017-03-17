@@ -39,6 +39,18 @@ namespace ProyectoTiempos.Utils
             }
 
 
+        public int buscarID(string codigo)
+        {
+            int id_sorteo;
+            DataTable result = new DataTable();
+            result = this.sorteo.SelectCodigo(codigo);
+            DataRow row = result.Rows[0];
+            string id = row["id"].ToString();
+            id_sorteo = Convert.ToInt32(id);
+            return id_sorteo;
+        }
+
+
         public Boolean existeSorteo(string codigo)
         {
             DataTable sor = new DataTable();

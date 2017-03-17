@@ -60,7 +60,9 @@
     <Compile Include="Controladores\Apuesta.cs" />
     <Compile Include="Controladores\Casa.cs" />
     <Compile Include="Controladores\Persona.cs" />
+    <Compile Include="Controladores\SorteoPremiado.cs" />
     <Compile Include="Modelo\Apuesta.cs" />
+    <Compile Include="Modelo\SorteoPremiado.cs" />
     <Compile Include="Utils\Contrasenna.cs" />
     <Compile Include="Utils\Logica.cs" />
     <Compile Include="Utils\Notificacion.cs" />

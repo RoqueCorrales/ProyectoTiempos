@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.cbSegundo = new System.Windows.Forms.ComboBox();
+            this.cbTercero = new System.Windows.Forms.ComboBox();
+            this.cbPrimero = new System.Windows.Forms.ComboBox();
             this.cbSorteo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -85,19 +85,20 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Tercero";
             // 
-            // button1
+            // btnAceptar
             // 
-            this.button1.Location = new System.Drawing.Point(136, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAceptar.Location = new System.Drawing.Point(136, 179);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(97, 23);
+            this.btnAceptar.TabIndex = 9;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // comboBox1
+            // cbSegundo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbSegundo.FormattingEnabled = true;
+            this.cbSegundo.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -195,15 +196,15 @@
             "97",
             "98",
             "99"});
-            this.comboBox1.Location = new System.Drawing.Point(147, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(86, 24);
-            this.comboBox1.TabIndex = 10;
+            this.cbSegundo.Location = new System.Drawing.Point(147, 83);
+            this.cbSegundo.Name = "cbSegundo";
+            this.cbSegundo.Size = new System.Drawing.Size(86, 24);
+            this.cbSegundo.TabIndex = 10;
             // 
-            // comboBox2
+            // cbTercero
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbTercero.FormattingEnabled = true;
+            this.cbTercero.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -301,15 +302,15 @@
             "97",
             "98",
             "99"});
-            this.comboBox2.Location = new System.Drawing.Point(277, 83);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(86, 24);
-            this.comboBox2.TabIndex = 11;
+            this.cbTercero.Location = new System.Drawing.Point(277, 83);
+            this.cbTercero.Name = "cbTercero";
+            this.cbTercero.Size = new System.Drawing.Size(86, 24);
+            this.cbTercero.TabIndex = 11;
             // 
-            // comboBox3
+            // cbPrimero
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbPrimero.FormattingEnabled = true;
+            this.cbPrimero.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -407,10 +408,10 @@
             "97",
             "98",
             "99"});
-            this.comboBox3.Location = new System.Drawing.Point(15, 83);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(86, 24);
-            this.comboBox3.TabIndex = 12;
+            this.cbPrimero.Location = new System.Drawing.Point(15, 83);
+            this.cbPrimero.Name = "cbPrimero";
+            this.cbPrimero.Size = new System.Drawing.Size(86, 24);
+            this.cbPrimero.TabIndex = 12;
             // 
             // cbSorteo
             // 
@@ -426,10 +427,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 212);
             this.Controls.Add(this.cbSorteo);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbPrimero);
+            this.Controls.Add(this.cbTercero);
+            this.Controls.Add(this.cbSegundo);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -449,10 +450,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ComboBox cbSegundo;
+        private System.Windows.Forms.ComboBox cbTercero;
+        private System.Windows.Forms.ComboBox cbPrimero;
         private System.Windows.Forms.ComboBox cbSorteo;
     }
 }

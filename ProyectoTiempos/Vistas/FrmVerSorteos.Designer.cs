@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNumeroSorteo = new System.Windows.Forms.Label();
-            this.lblNumeros = new System.Windows.Forms.Label();
             this.lblFechaSorteo = new System.Windows.Forms.Label();
+            this.lblNumeros = new System.Windows.Forms.Label();
+            this.lblNumeroSorteo = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.cbSorteo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
@@ -57,14 +57,14 @@
             this.panel1.Size = new System.Drawing.Size(241, 247);
             this.panel1.TabIndex = 1;
             // 
-            // lblNumeroSorteo
+            // lblFechaSorteo
             // 
-            this.lblNumeroSorteo.AutoSize = true;
-            this.lblNumeroSorteo.Location = new System.Drawing.Point(3, 14);
-            this.lblNumeroSorteo.Name = "lblNumeroSorteo";
-            this.lblNumeroSorteo.Size = new System.Drawing.Size(104, 17);
-            this.lblNumeroSorteo.TabIndex = 0;
-            this.lblNumeroSorteo.Text = "Numero Sorteo";
+            this.lblFechaSorteo.AutoSize = true;
+            this.lblFechaSorteo.Location = new System.Drawing.Point(3, 88);
+            this.lblFechaSorteo.Name = "lblFechaSorteo";
+            this.lblFechaSorteo.Size = new System.Drawing.Size(47, 17);
+            this.lblFechaSorteo.TabIndex = 6;
+            this.lblFechaSorteo.Text = "Fecha";
             // 
             // lblNumeros
             // 
@@ -75,14 +75,14 @@
             this.lblNumeros.TabIndex = 4;
             this.lblNumeros.Text = "lblPremios";
             // 
-            // lblFechaSorteo
+            // lblNumeroSorteo
             // 
-            this.lblFechaSorteo.AutoSize = true;
-            this.lblFechaSorteo.Location = new System.Drawing.Point(3, 88);
-            this.lblFechaSorteo.Name = "lblFechaSorteo";
-            this.lblFechaSorteo.Size = new System.Drawing.Size(47, 17);
-            this.lblFechaSorteo.TabIndex = 6;
-            this.lblFechaSorteo.Text = "Fecha";
+            this.lblNumeroSorteo.AutoSize = true;
+            this.lblNumeroSorteo.Location = new System.Drawing.Point(3, 14);
+            this.lblNumeroSorteo.Name = "lblNumeroSorteo";
+            this.lblNumeroSorteo.Size = new System.Drawing.Size(104, 17);
+            this.lblNumeroSorteo.TabIndex = 0;
+            this.lblNumeroSorteo.Text = "Numero Sorteo";
             // 
             // btnBuscar
             // 
@@ -100,6 +100,7 @@
             this.cbSorteo.Name = "cbSorteo";
             this.cbSorteo.Size = new System.Drawing.Size(121, 24);
             this.cbSorteo.TabIndex = 3;
+         
             // 
             // FrmVerSorteos
             // 

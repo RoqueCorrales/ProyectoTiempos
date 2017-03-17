@@ -170,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

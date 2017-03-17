@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoTiempos.Controladores;
+using ProyectoTiempos.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,58 @@ namespace ProyectoTiempos.Vistas
 {
     public partial class FrmNumerosPremiados : Form
     {
+        private DataTable result;
+        private Sorteo sorteo;
+        private SorteoPremiado sorPre;
+        private Logica log;
+
+
         public FrmNumerosPremiados()
         {
             InitializeComponent();
+            result = new DataTable();
+            sorPre = new SorteoPremiado();
+            sorteo = new Sorteo();
+            cargarCombo();
+            log = new Logica();
         }
 
-       
-    }
+        public ComboBox cargarCombo()
+        {
+            result = this.sorteo.SelectCodigo();
+
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+
+                cbSorteo.Items.Add(result.Rows[i]["codigo"]);
+
+
+            }
+            if (this.sorteo.isError)
+            {
+                MessageBox.Show(this.sorteo.errorDescription);
+
+            }
+
+            return cbSorteo;
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Object selectedItem = cbSorteo.SelectedItem;
+            string sorteo = selectedItem.ToString();
+            int id = log.buscarID(sorteo);
+            int numUno = Convert.ToInt32(cbPrimero.SelectedItem.ToString());
+            int numDos = Convert.ToInt32(cbSegundo.SelectedItem.ToString());
+            int numTres =Convert.ToInt32(cbTercero.SelectedItem.ToString());
+            sorPre.Insert(sorteo, numUno, numDos, numTres, id);
+
+            if (this.sorteo.isError)
+            {
+                MessageBox.Show(this.sorteo.errorDescription);
+
+            }
+        }
+
+            }
 }
