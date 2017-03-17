@@ -34,6 +34,12 @@ namespace ProyectoTiempos.Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
+            Modelo.Apuesta apuesta = new Modelo.Apuesta()
+            {
+                errorDescription = txtDescripcion.Text
+            };
+
             DateTime fecha = dtHora.Value.Date +
                     dtHora.Value.TimeOfDay;
             MessageBox.Show(fecha.ToString());

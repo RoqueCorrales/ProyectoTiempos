@@ -14,6 +14,7 @@ namespace ProyectoTiempos.Modelo
         public double monto { set; get; }
         public int numero { set; get; }
 
+
         public Apuesta()
         {
 
