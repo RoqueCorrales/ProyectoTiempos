@@ -33,6 +33,8 @@ namespace ProyectoTiempos
             configuracion.Visible = privilegios;
             this.person = person;
             lblJugador.Text = person.nombre;
+            
+            
         }
 
         private bool HandleForm(Form currentForm)
@@ -120,6 +122,9 @@ namespace ProyectoTiempos
             }
         }
 
-        
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

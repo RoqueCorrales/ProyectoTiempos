@@ -67,11 +67,18 @@ namespace ProyectoTiempos.Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int numero = Convert.ToInt32(cbNumero.SelectedItem.ToString());
-            double monto = validarMonto();
-            apuesta.Insert(persona.id, id_sorteo, monto, numero);
-            modificacionCasa();
-            MessageBox.Show("Apuesta Realizada");
+            if (validarMonto() > 0)
+            {
+                int numero = Convert.ToInt32(cbNumero.SelectedItem.ToString());
+                double monto = validarMonto();
+                apuesta.Insert(persona.id, id_sorteo, monto, numero);
+                modificacionCasa();
+                MessageBox.Show("Apuesta Realizada");
+            }else
+            {
+                MessageBox.Show("Dinero invalido");
+            }
+           
 
         }
 
