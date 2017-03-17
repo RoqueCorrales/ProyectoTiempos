@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dtHora = new System.Windows.Forms.DateTimePicker();
@@ -45,8 +44,8 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rbHabilitar = new System.Windows.Forms.RadioButton();
             this.rbDeshabilitar = new System.Windows.Forms.RadioButton();
+            this.rbHabilitar = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,27 +54,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 42);
+            this.label1.Location = new System.Drawing.Point(24, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 17);
+            this.label1.Size = new System.Drawing.Size(127, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Generar codigo de sorteo";
             // 
             // lblSerial
             // 
             this.lblSerial.AutoSize = true;
-            this.lblSerial.Location = new System.Drawing.Point(236, 42);
+            this.lblSerial.Location = new System.Drawing.Point(177, 34);
+            this.lblSerial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(46, 17);
+            this.lblSerial.Size = new System.Drawing.Size(35, 13);
             this.lblSerial.TabIndex = 2;
             this.lblSerial.Text = "label2";
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(355, 34);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGenerar.Location = new System.Drawing.Point(266, 28);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.Size = new System.Drawing.Size(56, 19);
             this.btnGenerar.TabIndex = 3;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -84,18 +85,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 89);
+            this.label3.Location = new System.Drawing.Point(24, 72);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha Sorteo";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(224, 203);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptar.Location = new System.Drawing.Point(168, 165);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(56, 19);
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -104,47 +106,38 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(157, 238);
+            this.label4.Location = new System.Drawing.Point(118, 193);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 17);
+            this.label4.Size = new System.Drawing.Size(137, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Lista de Sorteos registrados";
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(568, 159);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(102, 23);
-            this.btnActualizar.TabIndex = 9;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-          
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 137);
+            this.label2.Location = new System.Drawing.Point(26, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Descripcion";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(160, 137);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(120, 111);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(268, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(202, 20);
             this.txtDescripcion.TabIndex = 11;
             // 
             // dtHora
             // 
             this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtHora.Location = new System.Drawing.Point(173, 89);
-            this.dtHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtHora.Location = new System.Drawing.Point(130, 72);
+            this.dtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtHora.Name = "dtHora";
-            this.dtHora.Size = new System.Drawing.Size(169, 22);
+            this.dtHora.Size = new System.Drawing.Size(128, 20);
             this.dtHora.TabIndex = 12;
             // 
             // dtgSorteo
@@ -157,11 +150,10 @@
             this.phone,
             this.Estado,
             this.Codigo});
-            this.dtgSorteo.Location = new System.Drawing.Point(13, 265);
-            this.dtgSorteo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgSorteo.Location = new System.Drawing.Point(10, 215);
             this.dtgSorteo.Name = "dtgSorteo";
             this.dtgSorteo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgSorteo.Size = new System.Drawing.Size(731, 320);
+            this.dtgSorteo.Size = new System.Drawing.Size(548, 260);
             this.dtgSorteo.TabIndex = 14;
             this.dtgSorteo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSorteo_CellContentClick);
             // 
@@ -202,61 +194,64 @@
             // 
             this.panel1.Controls.Add(this.rbDeshabilitar);
             this.panel1.Controls.Add(this.rbHabilitar);
-            this.panel1.Location = new System.Drawing.Point(492, 117);
+            this.panel1.Location = new System.Drawing.Point(369, 95);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 37);
+            this.panel1.Size = new System.Drawing.Size(189, 30);
             this.panel1.TabIndex = 15;
-            // 
-            // rbHabilitar
-            // 
-            this.rbHabilitar.AutoSize = true;
-            this.rbHabilitar.Location = new System.Drawing.Point(3, 13);
-            this.rbHabilitar.Name = "rbHabilitar";
-            this.rbHabilitar.Size = new System.Drawing.Size(81, 21);
-            this.rbHabilitar.TabIndex = 0;
-            this.rbHabilitar.TabStop = true;
-            this.rbHabilitar.Text = "Habilitar";
-            this.rbHabilitar.UseVisualStyleBackColor = true;
             // 
             // rbDeshabilitar
             // 
             this.rbDeshabilitar.AutoSize = true;
-            this.rbDeshabilitar.Location = new System.Drawing.Point(139, 13);
+            this.rbDeshabilitar.Location = new System.Drawing.Point(104, 11);
+            this.rbDeshabilitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbDeshabilitar.Name = "rbDeshabilitar";
-            this.rbDeshabilitar.Size = new System.Drawing.Size(104, 21);
+            this.rbDeshabilitar.Size = new System.Drawing.Size(80, 17);
             this.rbDeshabilitar.TabIndex = 1;
             this.rbDeshabilitar.TabStop = true;
             this.rbDeshabilitar.Text = "Deshabilitar";
             this.rbDeshabilitar.UseVisualStyleBackColor = true;
             // 
+            // rbHabilitar
+            // 
+            this.rbHabilitar.AutoSize = true;
+            this.rbHabilitar.Location = new System.Drawing.Point(2, 11);
+            this.rbHabilitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbHabilitar.Name = "rbHabilitar";
+            this.rbHabilitar.Size = new System.Drawing.Size(63, 17);
+            this.rbHabilitar.TabIndex = 0;
+            this.rbHabilitar.TabStop = true;
+            this.rbHabilitar.Text = "Habilitar";
+            this.rbHabilitar.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(514, 94);
+            this.label5.Location = new System.Drawing.Point(386, 76);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 17);
+            this.label5.Size = new System.Drawing.Size(156, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Habilite o deshabilite un Sorteo.";
             // 
             // FrmCrearSorteo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 588);
+            this.ClientSize = new System.Drawing.Size(586, 478);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgSorteo);
             this.Controls.Add(this.dtHora);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblSerial);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCrearSorteo";
             this.Text = "FrmHabilitar";
             ((System.ComponentModel.ISupportInitialize)(this.dtgSorteo)).EndInit();
@@ -275,7 +270,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DateTimePicker dtHora;
