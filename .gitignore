@@ -19,6 +19,9 @@
 [Xx]86/
 [Bb]uild/
 bld/
+obj/
+bin/
+.vs/
 [Bb]in/
 [Oo]bj/
 
