@@ -76,17 +76,7 @@ namespace ProyectoTiempos.Modelo
 
 
         }
-        public DataTable Select(String codigo)
-        {
-
-            DataTable result = Program.da.SqlQuery("select * from sorteo where codigo = '" + codigo + "'", new Dictionary<string, object>());
-            if (Program.da.isError)
-            {
-                this.isError = true;
-                this.errorDescription = Program.da.errorDescription;
-            }
-            return result;
-        }
+       
 
         public void Update(int id, string descripcion, DateTime fecha,Boolean estado, string codigo)
         {

@@ -1,4 +1,5 @@
 ﻿using ProyectoTiempos.Controladores;
+using ProyectoTiempos.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,34 +17,34 @@ namespace ProyectoTiempos.Vistas
         
         private Serial serial;
         private Sorteo sorteo;
+        private Logica log;
+        private int id;
         public FrmCrearSorteo()
         {
 
             InitializeComponent();
             serial = new Serial();
             sorteo = new Sorteo();
+            log = new Logica();
              Refrescar();
            
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            serial = new Serial();
             lblSerial.Text = serial.sacarSerial();
+            btnGenerar.Visible = false;
             
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            Modelo.Apuesta apuesta = new Modelo.Apuesta()
-            {
-                errorDescription = txtDescripcion.Text
-            };
-
             DateTime fecha = dtHora.Value.Date +
                     dtHora.Value.TimeOfDay;
             MessageBox.Show(fecha.ToString());
-         
+
             string descripcion = txtDescripcion.Text;
             string codigo = lblSerial.Text;
             Boolean estado = false;
@@ -51,16 +52,33 @@ namespace ProyectoTiempos.Vistas
             {
                 estado = true;
             }
-            MessageBox.Show(Convert.ToString(estado));
+           
 
-            sorteo.Insert(descripcion, codigo, fecha, estado);
+
+            if (log.existeSorteo(lblSerial.Text))
+            {
+                this.sorteo.Update(id, descripcion, fecha, estado, codigo);
+            }else
+            {
+               
+                sorteo.Insert(descripcion, codigo, fecha, estado);
+               
+            }
+
+            
             Refrescar();
+            
 
         }
         private void Refrescar()
         {
             DataTable result = new DataTable();
             result = this.sorteo.Select();
+            txtDescripcion.Text = "";
+            lblSerial.Text = "";
+            dtHora.Value = DateTime.Now;
+            this.id = new Int32();
+            btnGenerar.Visible = true;
             if (this.sorteo.isError)
             {
                 MessageBox.Show(this.sorteo.errorDescription);
@@ -69,14 +87,11 @@ namespace ProyectoTiempos.Vistas
             this.dtgSorteo.DataSource = result;
         }
 
-        private void btnHabilitar_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void dtgSorteo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = Convert.ToInt32(this.dtgSorteo.CurrentRow.Cells[0].Value.ToString());
+             id = Convert.ToInt32(this.dtgSorteo.CurrentRow.Cells[0].Value.ToString());
             string descripcion = this.dtgSorteo.CurrentRow.Cells[1].Value.ToString();
             txtDescripcion.Text = descripcion;
             DateTime fecha = DateTime.Parse(this.dtgSorteo.CurrentRow.Cells[2].Value.ToString());
@@ -91,7 +106,8 @@ namespace ProyectoTiempos.Vistas
             }
             string codigo = this.dtgSorteo.CurrentRow.Cells[4].Value.ToString();
             lblSerial.Text = codigo;
-           // this.sorteo.Update(id, descripcion, fecha, estado, codigo);
+            
+
             if (this.sorteo.isError)
             {
                 MessageBox.Show(this.sorteo.errorDescription);
