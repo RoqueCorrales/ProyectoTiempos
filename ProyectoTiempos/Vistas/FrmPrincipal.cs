@@ -32,7 +32,7 @@ namespace ProyectoTiempos
             InitializeComponent();
             configuracion.Visible = privilegios;
             this.person = person;
-            lblJugador.Text = person.nombre;
+            lblJugador.Text = person.nombre + " " + person.apellido;
         }
 
         private bool HandleForm(Form currentForm)
@@ -128,6 +128,11 @@ namespace ProyectoTiempos
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nombre: "+person.nombre+"\nApellido: " + person.apellido + "\nCorreo: " + person.correo);
         }
     }
 }

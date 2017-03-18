@@ -13,8 +13,14 @@ namespace ProyectoTiempos
         public FrmLogin()
         {
             InitializeComponent();
-
             this.persona = new Persona();
+            CifrarContrasenha();
+        }
+        private void CifrarContrasenha()
+        {
+            txtContrasenna.Text = "";
+            txtContrasenna.PasswordChar = '*';
+            txtContrasenna.MaxLength = 15;
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
