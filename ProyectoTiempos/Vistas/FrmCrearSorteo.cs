@@ -40,34 +40,38 @@ namespace ProyectoTiempos.Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
-            DateTime fecha = dtHora.Value.Date +
-                    dtHora.Value.TimeOfDay;
-         
-            
-            string descripcion = txtDescripcion.Text;
-            string codigo = lblSerial.Text;
-            Boolean estado = false;
-            if (rbHabilitar.Checked)
+            if (ValidarCampos())
             {
-                estado = true;
+                DateTime fecha = dtHora.Value.Date +
+                                    dtHora.Value.TimeOfDay;
+
+
+                string descripcion = txtDescripcion.Text;
+                string codigo = lblSerial.Text;
+                Boolean estado = false;
+                if (rbHabilitar.Checked)
+                {
+                    estado = true;
+                }
+
+
+
+                if (log.existeSorteo(lblSerial.Text))
+                {
+                    this.sorteo.Update(id, descripcion, fecha, estado, codigo);
+                }
+                else
+                {
+
+                    sorteo.Insert(descripcion, codigo, fecha, estado);
+
+                }
+
+
+                Refrescar();
+
             }
-           
 
-
-            if (log.existeSorteo(lblSerial.Text))
-            {
-                this.sorteo.Update(id, descripcion, fecha, estado, codigo);
-            }else
-            {
-               
-                sorteo.Insert(descripcion, codigo, fecha, estado);
-               
-            }
-
-            
-            Refrescar();
-            
 
         }
         private void Refrescar()
@@ -113,6 +117,18 @@ namespace ProyectoTiempos.Vistas
                 MessageBox.Show(this.sorteo.errorDescription);
                 return;
             }
+
+        }
+        private Boolean ValidarCampos()
+        {
+            if (string.IsNullOrEmpty(lblSerial.Text) && string.IsNullOrEmpty(txtDescripcion.Text) && dtHora.Value.CompareTo(DateTime.Now) == 1)
+            {
+                MessageBox.Show("Todos los campos no estan llenos");
+                return false;
+            }
+
+
+            return true;
         }
     }
 }

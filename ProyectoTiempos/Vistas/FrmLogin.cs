@@ -13,9 +13,9 @@ namespace ProyectoTiempos
         public FrmLogin()
         {
             InitializeComponent();
-
             this.persona = new Persona();
             CifrarContrasenha();
+
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

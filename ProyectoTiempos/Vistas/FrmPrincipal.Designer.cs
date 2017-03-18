@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.crearSorteoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.lblJugador = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +58,9 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(843, 28);
+            this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
+            this.menuStrip.Text = "Josue Mora";
             // 
             // configuracion
             // 
@@ -69,34 +70,34 @@
             this.tablaDeGanadoresToolStripMenuItem,
             this.configuracionDElaCasaToolStripMenuItem});
             this.configuracion.Name = "configuracion";
-            this.configuracion.Size = new System.Drawing.Size(114, 24);
+            this.configuracion.Size = new System.Drawing.Size(95, 20);
             this.configuracion.Text = "Configuracion";
             // 
             // crearSorteoToolStripMenuItem
             // 
             this.crearSorteoToolStripMenuItem.Name = "crearSorteoToolStripMenuItem";
-            this.crearSorteoToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.crearSorteoToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.crearSorteoToolStripMenuItem.Text = "Sorteo";
             this.crearSorteoToolStripMenuItem.Click += new System.EventHandler(this.crearSorteoToolStripMenuItem_Click);
             // 
             // numerosPremiadosEnSorteoToolStripMenuItem
             // 
             this.numerosPremiadosEnSorteoToolStripMenuItem.Name = "numerosPremiadosEnSorteoToolStripMenuItem";
-            this.numerosPremiadosEnSorteoToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.numerosPremiadosEnSorteoToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.numerosPremiadosEnSorteoToolStripMenuItem.Text = "Numeros Premiados en Sorteo";
             this.numerosPremiadosEnSorteoToolStripMenuItem.Click += new System.EventHandler(this.numerosPremiadosEnSorteoToolStripMenuItem_Click);
             // 
             // tablaDeGanadoresToolStripMenuItem
             // 
             this.tablaDeGanadoresToolStripMenuItem.Name = "tablaDeGanadoresToolStripMenuItem";
-            this.tablaDeGanadoresToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.tablaDeGanadoresToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.tablaDeGanadoresToolStripMenuItem.Text = "Tabla de Ganadores";
             this.tablaDeGanadoresToolStripMenuItem.Click += new System.EventHandler(this.tablaDeGanadoresToolStripMenuItem_Click);
             // 
             // configuracionDElaCasaToolStripMenuItem
             // 
             this.configuracionDElaCasaToolStripMenuItem.Name = "configuracionDElaCasaToolStripMenuItem";
-            this.configuracionDElaCasaToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.configuracionDElaCasaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.configuracionDElaCasaToolStripMenuItem.Text = "Configuracion de la Casa";
             this.configuracionDElaCasaToolStripMenuItem.Click += new System.EventHandler(this.configuracionDElaCasaToolStripMenuItem_Click);
             // 
@@ -106,27 +107,27 @@
             this.disponiblesToolStripMenuItem,
             this.jugarToolStripMenuItem});
             this.sorteosToolStripMenuItem.Name = "sorteosToolStripMenuItem";
-            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.sorteosToolStripMenuItem.Text = "Sorteos";
             // 
             // disponiblesToolStripMenuItem
             // 
             this.disponiblesToolStripMenuItem.Name = "disponiblesToolStripMenuItem";
-            this.disponiblesToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.disponiblesToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.disponiblesToolStripMenuItem.Text = "Ver Sorteos";
             this.disponiblesToolStripMenuItem.Click += new System.EventHandler(this.disponiblesToolStripMenuItem_Click);
             // 
             // jugarToolStripMenuItem
             // 
             this.jugarToolStripMenuItem.Name = "jugarToolStripMenuItem";
-            this.jugarToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.jugarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.jugarToolStripMenuItem.Text = "Jugar";
             this.jugarToolStripMenuItem.Click += new System.EventHandler(this.jugarToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
@@ -135,41 +136,52 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(843, 25);
+            this.statusStrip.Size = new System.Drawing.Size(632, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
             // lblJugador
             // 
             this.lblJugador.AutoSize = true;
-            this.lblJugador.Location = new System.Drawing.Point(523, 0);
-            this.lblJugador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJugador.Location = new System.Drawing.Point(535, 9);
             this.lblJugador.Name = "lblJugador";
-            this.lblJugador.Size = new System.Drawing.Size(0, 17);
+            this.lblJugador.Size = new System.Drawing.Size(0, 13);
             this.lblJugador.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(603, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 24);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 558);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(632, 453);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblJugador);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
-            this.Text = "FrmPrincipal";
+            this.Text = "JPS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             this.menuStrip.ResumeLayout(false);
@@ -197,6 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem jugarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearSorteoToolStripMenuItem;
         private System.Windows.Forms.Label lblJugador;
+        private System.Windows.Forms.Button button1;
     }
 }
 
