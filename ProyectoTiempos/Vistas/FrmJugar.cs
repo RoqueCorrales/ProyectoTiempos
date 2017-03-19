@@ -47,7 +47,7 @@ namespace ProyectoTiempos.Vistas
         }
         public ComboBox cargarCombo()
         {
-            result = this.sorteo.SelectCodigo();
+            result = this.sorteo.SelectSorteosEstadoTrue();
 
             for (int i = 0; i < result.Rows.Count; i++)
             {

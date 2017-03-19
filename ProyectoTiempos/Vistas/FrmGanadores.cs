@@ -46,7 +46,7 @@ namespace ProyectoTiempos.Vistas
         {
             DataTable result = new DataTable();
            
-            result = this.sorteo.Select();
+            result = this.sorteo.SelectSorteosEstadoTrue();
            
             for (int i = 0; i < result.Rows.Count; i++)
             {

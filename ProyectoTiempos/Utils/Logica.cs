@@ -13,9 +13,11 @@ namespace ProyectoTiempos.Utils
     public class Logica : ErrorHandler
     {
         private Sorteo sorteo;
+        private SorteoPremiado sorPre;
         public Logica()
         {
             sorteo = new Sorteo();
+            sorPre = new SorteoPremiado();
         }
 
 
@@ -23,7 +25,7 @@ namespace ProyectoTiempos.Utils
         {
             DataTable result = new DataTable();
             ComboBox combo = new ComboBox();
-            result = this.sorteo.Select();
+            result = this.sorteo.SelectCodigo();
             if (this.sorteo.isError)
             {
                 this.isError = true;
@@ -67,7 +69,42 @@ namespace ProyectoTiempos.Utils
         }
 
 
+        public ComboBox cargarComboxSorteosNoPremiados()
+        {
+            DataTable todos = new DataTable();
+            DataTable resultPremiados = new DataTable();
+            ComboBox combo = new ComboBox();
+            todos= this.sorteo.SelectSorteosEstadoTrue();
+            resultPremiados = this.sorPre.Select();
+            if (this.sorteo.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.sorteo.errorDescription;
+            }
+            if ( this.sorPre.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.sorPre.errorDescription;
+            }
+            for (int i = 0; i < todos.Rows.Count; i++)
+            {
+                string a = (todos.Rows[i]["codigo"]).ToString();
+                for (int j = 0; j < resultPremiados.Rows.Count; j++)
+                {
+                    if (!resultPremiados.Rows[j]["codigo_sorteo"].ToString().Equals(a))
+                    {
+                        combo.Items.Add(a);
+                    }
+                }
+            }
+            
 
+
+            return combo;
         }
+
+
+
+    }
     }
 

@@ -30,7 +30,7 @@ namespace ProyectoTiempos.Modelo
             this.estado = estado;
         }
 
-        public DataTable Select()
+        public DataTable SelectCodigo()
         {
             DataTable result = Program.da.SqlQuery("select * from sorteo ;", new Dictionary<string, object>());
             if (Program.da.isError)
@@ -40,8 +40,8 @@ namespace ProyectoTiempos.Modelo
             }
             return result;
         }
-        public DataTable SelectCodigo()
-        {
+        public DataTable SelectSorteosEstadoTrue()
+{
             DataTable result = Program.da.SqlQuery("SELECT * FROM public.sorteo WHERE estado = True;", new Dictionary<string, object>());
             if (Program.da.isError)
             {

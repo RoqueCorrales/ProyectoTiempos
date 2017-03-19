@@ -45,5 +45,17 @@ namespace ProyectoTiempos.Modelo
                 this.id = Convert.ToInt32(result.Rows[0]["id"]);
             }
         }
+
+
+        public DataTable Select()
+        {
+            DataTable result = Program.da.SqlQuery("select * from  public.numpremiados;", new Dictionary<string, object>());
+            if (Program.da.isError)
+            {
+                this.isError = true;
+                this.errorDescription = Program.da.errorDescription;
+            }
+            return result;
+        }
     }
 }

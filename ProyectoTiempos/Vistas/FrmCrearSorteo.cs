@@ -77,7 +77,7 @@ namespace ProyectoTiempos.Vistas
         private void Refrescar()
         {
             DataTable result = new DataTable();
-            result = this.sorteo.Select();
+            result = this.sorteo.SelectCodigo();
             txtDescripcion.Text = "";
             lblSerial.Text = "";
             dtHora.Value = DateTime.Now;
