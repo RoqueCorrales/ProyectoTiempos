@@ -26,11 +26,11 @@ namespace ProyectoTiempos.Controladores
             }
         }
 
-        public DataTable Select()
+        public DataTable SelectSorteosEstadoTrue()
         {
             DataTable result = new DataTable();
             result = new DataTable();
-            result = this.sorteo.Select();
+            result = this.sorteo.SelectSorteosEstadoTrue();
            if(this.sorteo.isError) {
                 this.isError = true;
                 this.errorDescription = this.sorteo.errorDescription;

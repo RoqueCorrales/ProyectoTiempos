@@ -23,28 +23,42 @@ namespace ProyectoTiempos.Vistas
         public FrmNumerosPremiados()
         {
             InitializeComponent();
-            result = new DataTable();
+            //result = new DataTable();
             sorPre = new SorteoPremiado();
             sorteo = new Sorteo();
-            cargarCombo();
             log = new Logica();
+            refrecar();
+           
+            //cbSorteo = log.cargarComboxSorteosNoPremiados();
         }
 
         public ComboBox cargarCombo()
         {
-            result = this.sorteo.SelectCodigo();
 
-            for (int i = 0; i < result.Rows.Count; i++)
+            DataTable todos = new DataTable();
+            DataTable resultPremiados = new DataTable();
+
+            todos = sorteo.SelectSorteosEstadoTrue();
+            resultPremiados = sorPre.Select();
+            List<string> lista = new List<string>();
+
+            for (int i = 0; i < todos.Rows.Count; i++)
             {
+                string a = (todos.Rows[i]["codigo"]).ToString();
+                lista.Add(a);
+             }
 
-                cbSorteo.Items.Add(result.Rows[i]["codigo"]);
-
-
+            for (int j = 0; j < resultPremiados.Rows.Count; j++)
+            {
+                string a = resultPremiados.Rows[j]["codigo_sorteo"].ToString();
+                if (lista.Contains(a))
+                {
+                    lista.Remove(a);
+                }
             }
-            if (this.sorteo.isError)
+            for (int i = 0; i < lista.Count; i++)
             {
-                MessageBox.Show(this.sorteo.errorDescription);
-
+                cbSorteo.Items.Add(lista[i]);
             }
 
             return cbSorteo;
@@ -65,6 +79,17 @@ namespace ProyectoTiempos.Vistas
                 MessageBox.Show(this.sorteo.errorDescription);
 
             }
+            refrecar();
+        }
+
+        public void refrecar()
+        {
+            cbSorteo.Items.Clear();
+            cargarCombo();
+            //cbSorteo.SelectedIndex = -1;
+            cbPrimero.SelectedIndex = -1;
+            cbTercero.SelectedIndex = -1;
+            cbSegundo.SelectedIndex = -1;
         }
 
             }

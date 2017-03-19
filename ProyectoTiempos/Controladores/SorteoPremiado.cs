@@ -1,6 +1,7 @@
 ﻿using DBAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,18 @@ namespace ProyectoTiempos.Controladores
                 this.isError = true;
                 this.errorDescription = this.sorPre.errorDescription;
             }
+        }
+        public DataTable Select()
+        {
+            DataTable result = new DataTable();
+            result = new DataTable();
+            result = this.sorPre.Select();
+            if (this.sorPre.isError)
+            {
+                this.isError = true;
+                this.errorDescription = this.sorPre.errorDescription;
+            }
+            return result;
         }
     }
 }
